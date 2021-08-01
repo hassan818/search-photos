@@ -4,6 +4,7 @@ import UnSplash from "./api/UnSplash";
 import SearchBar from "./components/SearchBar";
 import ImageList from "./components/ImageList";
 import ButtonIcon from "./DarkMode/DarkMode/ButtonIcon";
+
 class App extends React.Component {
   state = { images: [] };
 
@@ -20,7 +21,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App ui container" style={{ marginTop: "10px" }}>
-        <ButtonIcon></ButtonIcon>
+        <div className="ui grid">
+          <ButtonIcon />
+        </div>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <ImageList images={this.state.images} />
       </div>
